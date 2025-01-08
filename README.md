@@ -12,7 +12,7 @@
 * Enjoy!
 
 
-### How create a Sonda image for Raspberry Pi Zero from scratch ###
+### How to create a Sonda image for Raspberry Pi Zero from scratch ###
 
 	* Using Raspberry Pi Imager, install Raspbian 32-bit OS Lite on a 4GB SD card
 	* Copy ssh and wpa_supplicant.conf files from headless-wifi-setup folder to boot folder of the newly created SD card
