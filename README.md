@@ -1,6 +1,7 @@
 # README #
 
-![alt text](https://github.com/reyparma/sonda/blob/main/images/internet_radio_prototype.png)
+![Internet Radio Prototype](https://github.com/reyparma/sonda/blob/main/images/internet_radio_prototype.png)
+<p align="center">Figure 1. Internet Radio Prototype</p>
 
 ### Quick Install of Sonda Reference Implementation on Pi Zero ###
 * Using Raspberry Pi Imager, install the Sonda Reference Implementation by choosing "sonda-reference-v1-4gb-zero.img" file as the OS
