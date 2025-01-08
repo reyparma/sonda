@@ -1,0 +1,5 @@
+UKSmoothJazz	http://64.95.243.43:8002/stream
+Motown	http://144.217.115.101:8066/stream
+Country	http://server-27.stream-server.nl:8300/stream
+Classical	http://185.33.21.113:80/baroque_128
+Piano	http://158.69.224.10:8004/stream

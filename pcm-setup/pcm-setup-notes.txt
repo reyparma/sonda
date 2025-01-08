@@ -1,0 +1,54 @@
+References:
+https://www.alsa-project.org/wiki/Asoundrc
+
+How to configure MPD
+
+Wiring notes
+1.  Every time you make a change to the wiring, you need to shutdown raspi and disconnect power and reconnect and boot.
+
+New Raspberry Pi OS setup
+0.  sudo raspi-config
+1.  sudo apt update
+2.  sudo apt upgrade
+3.  Test alsa if installed
+    3.1  ls -ltr /usr/share/alsa/alsa.conf - this file should exist
+    3.2  aplay -l - should show list of playback hardware devices (PCM5102 will not show even if it's wired to the raspi - need to install driver)
+    3.3 alsamixer should come up but no controls
+4.  Make changes as shown basic1/.  Reboot.  speaker-test -twav -c2.  You should hear maximum volume of the sound test.
+5.  sudo apt install mpd mpc 
+6.  Edit /etc/mpd.conf as shown in mpdbasic1/ 
+
+audio_output {
+        type            "alsa"
+        name            "My ALSA Device"
+#       device          "hw:0,0"        # optional
+#       mixer_type      "hardware"      # optional
+#       mixer_device    "default"       # optional
+#       mixer_control   "PCM"           # optional
+#       mixer_index     "0"             # optional
+}
+
+7. sudo systemctl restart mpd - restart mpd to load the latest changes to mpd.conf 
+8. Add a test internet station - mpc add http://64.95.243.43:8002/stream
+9. mpc play 1 - The music will play maximum volume!!!
+10. mpc volume 50 - This command will have no effect.  You will see it return volume: n/a
+11.  You need to add a software volume control to the configuration
+12.  Replace /etc/asound.conf with basic2/.  Reboot raspi.
+13.  speaker-test -Dsoftvol -twav -c2
+14.  amixer controls - will show something like this: numid=1,iface=MIXER,name='PCM'
+15.  Now we need to configure mpd to use the software volume control
+16.  Edit /etc/mpd.conf as follows:
+      audio_output {
+        type            "alsa"
+        name            "My ALSA Device"
+        device          "hw:0,0"        # optional
+        mixer_type      "software"      # optional
+        mixer_device    "default"       # optional
+        mixer_control   "PCM"           # optional
+        mixer_index     "0"             # optional
+      }
+17. Restart mpd:  sudo systemctl restart mpd
+18. mpc volume 30
+19. mpc play 1
+20. You should now be able to change the volume using mpc commands.  You can also use alsamixer and change the volume there.
+

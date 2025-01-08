@@ -1,0 +1,9 @@
+Speakers
+2" 3W,4ohm 1" 3W 4ohom
+Same results for both
+1.  PAM8403 - distortion at mpc vol 45
+2.  PM8406 - same results as PAM8406
+3.  Big amp with volume know, needed to put the vol all the way down to handle mpc vol 100
+
+Conclusion:  speakers cannot handle higher power than 3W.  change speakers to higher power.
+ 
