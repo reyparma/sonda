@@ -1,7 +1,17 @@
-# README #
+# Sonda Internet Radio (With Motion and Temperature Sensors) #
+
+![sonda_v1_prototype](https://github.com/user-attachments/assets/d3faf814-c801-4128-a844-7a385bba09ec)
+
+<p align="center">Sonda Version 1 Prototype with 3D-Printed Case</p>
+
+
+
+https://github.com/user-attachments/assets/e648aa75-836d-4277-922e-4481aff15be4
+
+<p align="center">Sonda Version 1 Test</p>
 
 ![Internet Radio Prototype](https://github.com/reyparma/sonda/blob/main/images/internet_radio_prototype.png)
-<p align="center">Figure 1. Internet Radio Prototype</p>
+<p align="center">Sonda Version 2 (RGB OLED Display) Breadboard</p>
 
 ### Quick Install of Sonda Reference Implementation on Pi Zero ###
 * Using Raspberry Pi Imager, install the Sonda Reference Implementation by choosing "sonda-reference-v1-4gb-zero.img" file as the OS
